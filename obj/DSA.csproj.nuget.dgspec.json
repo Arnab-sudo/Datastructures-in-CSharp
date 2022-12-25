@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dipam\\CodeSpace\\CSHARP\\CSHARP-DSA\\DSA\\DSA.csproj": {}
+    "C:\\Users\\dipam\\CodeSpace\\Git-Repos\\Datastructures-in-CSharp\\DSA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dipam\\CodeSpace\\CSHARP\\CSHARP-DSA\\DSA\\DSA.csproj": {
+    "C:\\Users\\dipam\\CodeSpace\\Git-Repos\\Datastructures-in-CSharp\\DSA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dipam\\CodeSpace\\CSHARP\\CSHARP-DSA\\DSA\\DSA.csproj",
+        "projectUniqueName": "C:\\Users\\dipam\\CodeSpace\\Git-Repos\\Datastructures-in-CSharp\\DSA.csproj",
         "projectName": "DSA",
-        "projectPath": "C:\\Users\\dipam\\CodeSpace\\CSHARP\\CSHARP-DSA\\DSA\\DSA.csproj",
+        "projectPath": "C:\\Users\\dipam\\CodeSpace\\Git-Repos\\Datastructures-in-CSharp\\DSA.csproj",
         "packagesPath": "C:\\Users\\dipam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dipam\\CodeSpace\\CSHARP\\CSHARP-DSA\\DSA\\obj\\",
+        "outputPath": "C:\\Users\\dipam\\CodeSpace\\Git-Repos\\Datastructures-in-CSharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dipam\\AppData\\Roaming\\NuGet\\NuGet.Config",
