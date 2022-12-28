@@ -129,6 +129,80 @@ namespace datastructures{
         //Nodes of linked list--
         //contais the data along with memory address for next node...
 
+        public class Node{
+            public int element;
+            public Node next; //creating a node instance that will be he next node in the list;
+            public Node(int e, Node n){
+                //constructor for Node class
+                element = e;//value of the Node;
+                next=n;//next which is  a object type of Node(as declared in the class) is  referring to the forward node n(as will be declred by class instaces that is, objects);
+
+
+             
+
+            }
+        }
+
+        class LinkedList{
+
+            private Node? head;//first node in the linked list;we make these object nodes nullable so that they can refer to null vlaues while being value types.
+            private Node? tail;//last node in the list;
+            private int size;
+
+            public LinkedList(){
+
+                //initially the list will be empty
+                //so
+                head=null;
+                tail=null;
+                size=0;
+
+
+            }
+
+            //Methods
+
+            public int length(){
+                return size;
+            }
+
+            public bool isEmpty(){
+                return size==0;
+            }
+
+            public void addlast(int e){
+                Node newest = new Node(e,null);//because the new node doesnt poin t any other node, given that is the new last node;
+                if(isEmpty()){
+                    head=newest;
+
+                }
+                else{
+                    if(tail!=null){
+                        //we need to check if tail node is null or not because tail is a nullable type thjat can refer to a null vlaue, which otherwise will throw an exception though the code will run,,,its just safer this way
+                        tail.next=newest;
+
+                    }
+                    
+                }
+                tail=newest;
+                size=size+1;
+
+            }
+
+            public void display(){
+                Node? p=head;
+                while(p!=null){
+                    Console.WriteLine(p.element);
+                    p=p.next;
+                }
+                Console.WriteLine();
+            }
+
+
+        }
+
+
+
           
 
 
@@ -272,6 +346,13 @@ namespace datastructures{
             que.enqueue(5);
             Console.WriteLine(que.len());
             que.display();
+            LinkedList link=new LinkedList();
+            link.addlast(7);
+            link.addlast(4);
+            link.addlast(12);
+            link.display();
+            Console.WriteLine(link.isEmpty());
+
 
 
 
