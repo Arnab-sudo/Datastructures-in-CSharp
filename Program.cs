@@ -189,6 +189,105 @@ namespace datastructures{
 
             }
 
+              
+            //inserting node/element at te top of the list
+            public void addfirst(int e){
+                Node newest = new Node(e, null);
+                if(isEmpty()){
+                    head=newest;
+                    tail=newest;
+                }
+                else{
+                    if(head!=null){
+                        newest.next = head;
+                        head=newest;
+
+                    }
+                    size=size+1;
+                    
+                }
+            }
+
+            //inserting an element/node anywhere in the middle of he list
+            public void adddany(int e, int position){
+                if(position<=0||position>=size){
+                    Console.WriteLine("invalid");
+                    return;
+                    //point to be noted--
+                    /*The return statement can be skipped only for void types. Not using return statement in void return type function: When a function does not return anything, the void return type is used. So if there is a void return type in the function definition, then there will be no return statement inside that function (generally)*/
+                }
+                Node newest = new Node(e, null);//declaring variables with same namesin different methods isokay because under OOPS the scope of the variables are different;
+                Node? p = head;
+                int i = 1;
+                while(i<position-1){//while loop best suited because it requires iterations
+                    if(p!=null){
+                        p=p.next;
+
+                    }
+                    i=i+1;
+
+
+
+                }
+                if(newest!=null && p!=null){
+                    //in this case, running a while lop is a bad idea becaus eth condition is true all the time, there is no xit to the ocndtions which is why the code will run nfinetly...thus if loop is best as it doesnt require iterative calculations;
+                    newest.next=p.next;
+                    p.next=newest;
+                }
+                size=size+1;
+
+
+
+            }
+
+            //deleting at the beginning of the linked list
+            public int removefirst(){
+
+                if(isEmpty()){
+                    return -1;
+                }
+                else{
+                    if(head!=null){
+                        int e = head.element;
+                        head=head.next;
+                        return e;
+                        
+
+
+
+                    }
+                    
+                    size=size-1;
+                    if(isEmpty()){
+                        tail=null;
+                       
+
+                    }
+                    return 1;
+                    //always close a if else block with a return statement unless yu want to get an erro saying that not all code paths return a variable; 
+                    //return 1 means that the functionreturn true boolean value; return 0 wud have meant tha the functionwas returning false value.                 
+                    
+                }
+
+
+
+            }
+
+            public int removelast(){
+                if(isEmpty()){
+                    return -1;
+                }
+                Node? p = head;
+                
+                
+                return 1;
+            }
+
+
+          
+
+
+
             public void display(){
                 Node? p=head;
                 while(p!=null){
@@ -350,6 +449,10 @@ namespace datastructures{
             link.addlast(7);
             link.addlast(4);
             link.addlast(12);
+            link.display();
+            link.addfirst(15);
+            link.adddany(20,3);
+            link.removefirst();
             link.display();
             Console.WriteLine(link.isEmpty());
 
